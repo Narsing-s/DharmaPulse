@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "DharmaPulse",
+  "short_name": "DharmaPulse",
+  "version": "1.3.0",
+  "description": "A calm daily devotional companion with unique daily Dharma, mantras, wisdom and reminders.",
+  "minimum_chrome_version": "120",
+  "permissions": ["alarms", "notifications", "storage"],
+  "host_permissions": ["https://raw.githubusercontent.com/*"],
+  "action": {"default_title": "DharmaPulse", "default_popup": "popup.html"},
+  "background": {"service_worker": "background.js"},
+  "options_ui": {"page": "options.html", "open_in_tab": true},
+  "icons": {"16": "icon.svg", "48": "icon.svg", "128": "icon.svg"}
+}
