@@ -64,103 +64,377 @@
   "messages": [
     [
       "Kanaka Durga",
-      "May courage, clarity and compassion guide your day.",
-      "ఈ రోజు ధైర్యం, స్పష్టత మరియు కరుణ మీకు మార్గదర్శకంగా ఉండాలి."
+      "May your courage be gentle, your choices clear, and your heart compassionate.",
+      "మీ ధైర్యం సౌమ్యంగా, మీ నిర్ణయాలు స్పష్టంగా, మీ హృదయం కరుణతో నిండుగా ఉండాలి."
     ],
     [
       "Venkateswara",
-      "Walk with patience today; what is meant for you will arrive in its time.",
-      "ఈ రోజు ఓర్పుతో నడవండి; మీ కోసం ఉన్నది సరైన సమయంలో చేరుతుంది."
+      "Move patiently today; steady faith can make ordinary steps meaningful.",
+      "ఈ రోజు ఓర్పుతో సాగండి; స్థిరమైన విశ్వాసం సాధారణ అడుగులకూ అర్థాన్ని ఇస్తుంది."
     ],
     [
       "Shiva",
-      "Let go of what you cannot control and give your attention to what you can improve.",
-      "మీ నియంత్రణలో లేని దాన్ని వదిలి, మెరుగుపరచగల దానిపై దృష్టి పెట్టండి."
+      "Make space for silence today and notice what becomes clear within it.",
+      "ఈ రోజు నిశ్శబ్దానికి స్థలం ఇవ్వండి; అందులో మీలో స్పష్టమయ్యేదాన్ని గమనించండి."
     ],
     [
       "Hanuman",
-      "Strength grows when it is joined with humility and service.",
-      "వినయంతో, సేవతో కలిసినప్పుడు శక్తి మరింత పెరుగుతుంది."
+      "Use your strength to serve, protect and encourage someone today.",
+      "ఈ రోజు మీ శక్తిని సేవకు, రక్షణకు, మరొకరిని ప్రోత్సహించడానికి ఉపయోగించండి."
     ],
     [
       "Lakshmi",
-      "Create abundance through gratitude, honest work and generosity.",
-      "కృతజ్ఞత, నిజాయితీతో కూడిన శ్రమ, దాతృత్వంతో సమృద్ధిని సృష్టించండి."
+      "Let gratitude turn what you have into a source of generosity.",
+      "కృతజ్ఞతతో మీ వద్ద ఉన్నదాన్ని దాతృత్వానికి మూలంగా మార్చండి."
     ],
     [
       "Saraswati",
-      "Learn one useful thing today and share it with someone.",
-      "ఈ రోజు ఒక ఉపయోగకరమైన విషయం నేర్చుకుని, మరొకరితో పంచుకోండి."
+      "Give a few minutes to learning something that makes you wiser.",
+      "మీ జ్ఞానాన్ని పెంచే ఒక విషయాన్ని నేర్చుకోవడానికి కొన్ని నిమిషాలు కేటాయించండి."
     ],
     [
       "Ganesha",
-      "Begin with a clear intention; small steady steps remove many obstacles.",
-      "స్పష్టమైన సంకల్పంతో ప్రారంభించండి; చిన్న స్థిరమైన అడుగులు ఎన్నో అడ్డంకులను తొలగిస్తాయి."
+      "Start one delayed task with a calm mind and one clear step.",
+      "ప్రశాంతమైన మనస్సుతో ఆలస్యం చేసిన ఒక పనిని ఒక స్పష్టమైన అడుగుతో ప్రారంభించండి."
     ],
     [
       "Krishna",
-      "Do your duty with care, without letting the result steal your peace.",
-      "ఫలితం మీ ప్రశాంతతను దొంగిలించనివ్వకుండా, మీ కర్తవ్యాన్ని శ్రద్ధగా చేయండి."
+      "Do today's work sincerely and leave tomorrow's worries for tomorrow.",
+      "ఈ రోజు పనిని నిజాయితీగా చేయండి; రేపటి ఆందోళనలను రేపటికి వదిలేయండి."
     ],
     [
       "Rama",
-      "Choose truth even when the easy path is tempting.",
-      "సులభమైన మార్గం ఆకర్షించినా సత్యాన్ని ఎంచుకోండి."
+      "Let integrity guide you when nobody is watching.",
+      "ఎవరూ చూడనప్పుడు కూడా నిబద్ధత మీకు మార్గదర్శకంగా ఉండాలి."
     ],
     [
       "Shani",
-      "Discipline turns difficult seasons into lasting strength.",
-      "క్రమశిక్షణ కఠిన కాలాలను శాశ్వతమైన బలంగా మారుస్తుంది."
+      "Patience and discipline can make difficult work more purposeful.",
+      "ఓర్పు, క్రమశిక్షణ కఠినమైన పనికీ మరింత అర్థాన్ని ఇవ్వగలవు."
+    ],
+    [
+      "Durga",
+      "Protect your peace by choosing your words with care.",
+      "మీ మాటలను జాగ్రత్తగా ఎంచుకోవడం ద్వారా మీ మనశ్శాంతిని కాపాడుకోండి."
+    ],
+    [
+      "Narasimha",
+      "Face fear with awareness rather than letting fear choose your actions.",
+      "భయం మీ చర్యలను నిర్ణయించనివ్వకుండా అవగాహనతో దాన్ని ఎదుర్కోండి."
+    ],
+    [
+      "Surya",
+      "Begin with gratitude for the light, energy and opportunity of a new day.",
+      "కొత్త రోజు ఇచ్చే వెలుగు, శక్తి, అవకాశాలకు కృతజ్ఞతతో ప్రారంభించండి."
+    ],
+    [
+      "Parvati",
+      "Strength and tenderness can exist together.",
+      "బలం, సున్నితత్వం రెండూ కలిసి ఉండగలవు."
+    ],
+    [
+      "Kartikeya",
+      "Focus your energy on one meaningful goal before chasing many.",
+      "అనేక లక్ష్యాల వెంటపడే ముందు ఒక అర్థవంతమైన లక్ష్యంపై శక్తిని కేంద్రీకరించండి."
+    ],
+    [
+      "Radhakrishna",
+      "Let devotion make your heart kinder, not merely your routine longer.",
+      "భక్తి మీ ఆచారాన్ని మాత్రమే కాదు, మీ హృదయాన్ని కూడా మరింత దయతో నింపాలి."
+    ],
+    [
+      "Dattatreya",
+      "Learn from every experience without carrying every burden forward.",
+      "ప్రతి అనుభవం నుంచి నేర్చుకోండి; ప్రతి భారాన్ని మాత్రం ముందుకు మోసుకెళ్లవద్దు."
+    ],
+    [
+      "Ayyappa",
+      "Keep discipline balanced with humility and respect for others.",
+      "క్రమశిక్షణను వినయం, ఇతరుల పట్ల గౌరవంతో సమతుల్యం చేయండి."
+    ],
+    [
+      "Nookalamma",
+      "Keep faith close while taking practical care of the people around you.",
+      "విశ్వాసాన్ని దగ్గరగా ఉంచుతూ మీ చుట్టూ ఉన్నవారిని ఆచరణాత్మకంగా చూసుకోండి."
+    ],
+    [
+      "Venkateswari",
+      "Offer patience to yourself while you work toward better habits.",
+      "మంచి అలవాట్ల కోసం కృషి చేస్తూ మీపై కూడా ఓర్పు చూపండి."
+    ],
+    [
+      "Anjaneya",
+      "When a task feels heavy, begin with service rather than worry.",
+      "పని భారంగా అనిపించినప్పుడు ఆందోళనకు బదులుగా సేవతో ప్రారంభించండి."
+    ],
+    [
+      "Sita",
+      "Quiet dignity can be stronger than a loud response.",
+      "నిశ్శబ్దమైన గౌరవం గట్టిగా ఇచ్చే ప్రతిస్పందన కంటే బలంగా ఉండవచ్చు."
+    ],
+    [
+      "Nandi",
+      "Let steadiness carry you through a day of changing circumstances.",
+      "మారుతున్న పరిస్థితుల మధ్య స్థిరత్వం మిమ్మల్ని ముందుకు నడిపించనివ్వండి."
+    ],
+    [
+      "Radha",
+      "Let love be expressed through patience, presence and kindness.",
+      "ప్రేమను ఓర్పు, తోడ్పాటు, దయ ద్వారా వ్యక్తపరచండి."
+    ],
+    [
+      "Krishna",
+      "Before reacting, ask whether your response creates clarity or more noise.",
+      "ప్రతిస్పందించే ముందు మీ మాట స్పష్టతను ఇస్తుందా లేక మరింత గందరగోళాన్ని సృష్టిస్తుందా అని ఆలోచించండి."
+    ],
+    [
+      "Saraswati",
+      "Write down one question you genuinely want to understand today.",
+      "ఈ రోజు నిజంగా అర్థం చేసుకోవాలనుకునే ఒక ప్రశ్నను రాసుకోండి."
+    ],
+    [
+      "Ganesha",
+      "A small completed step is often better than a perfect plan that never starts.",
+      "ఎప్పటికీ ప్రారంభం కాని పరిపూర్ణ ప్రణాళిక కంటే పూర్తిచేసిన చిన్న అడుగు మంచిది."
+    ],
+    [
+      "Shiva",
+      "Release one unnecessary worry and return your attention to the present.",
+      "అవసరం లేని ఒక ఆందోళనను వదిలి మీ దృష్టిని వర్తమానానికి తీసుకురండి."
+    ],
+    [
+      "Lakshmi",
+      "Share one resource, skill or kind word without expecting a return.",
+      "ప్రతిఫలం ఆశించకుండా ఒక వనరు, నైపుణ్యం లేదా మంచి మాటను పంచుకోండి."
+    ],
+    [
+      "Hanuman",
+      "Courage grows when action follows a sincere intention.",
+      "నిజమైన సంకల్పం తర్వాత చర్య తీసుకున్నప్పుడు ధైర్యం పెరుగుతుంది."
     ]
   ],
   "mantras": [
     [
       "Om Namah Shivaya",
       "ఓం నమః శివాయ",
-      "A simple Shiva mantra for quiet reflection.",
-      "శాంతమైన ధ్యానానికి శివ మంత్రం."
+      "Traditional Shiva mantra for devotional practice.",
+      "శివ భక్తి సాధనలో ప్రసిద్ధి చెందిన సంప్రదాయ మంత్రం."
     ],
     [
       "Om Gam Ganapataye Namaha",
       "ఓం గం గణపతయే నమః",
-      "A traditional Ganesha mantra used at beginnings.",
-      "ప్రారంభాల్లో జపించే గణేశ మంత్రం."
+      "Traditional Ganesha mantra associated with beginnings.",
+      "ప్రారంభాలతో అనుబంధమైన సంప్రదాయ గణేశ మంత్రం."
     ],
     [
       "Om Hanumate Namah",
       "ఓం హనుమతే నమః",
-      "A short Hanuman mantra for focused devotion.",
-      "ఏకాగ్ర భక్తికి హనుమాన్ మంత్రం."
+      "Traditional Hanuman mantra for devotional focus.",
+      "భక్తి ఏకాగ్రత కోసం ఉపయోగించే సంప్రదాయ హనుమాన్ మంత్రం."
     ],
     [
       "Om Namo Venkatesaya",
       "ఓం నమో వేంకటేశాయ",
-      "A traditional Venkateswara mantra.",
-      "వేంకటేశ్వర స్వామి సంప్రదాయ మంత్రం."
+      "Traditional Venkateswara devotional mantra.",
+      "వేంకటేశ్వర స్వామి సంప్రదాయ భక్తి మంత్రం."
     ],
     [
       "Om Shreem Mahalakshmyai Namah",
       "ఓం శ్రీం మహాలక్ష్మ్యై నమః",
-      "A traditional Lakshmi mantra for devotional practice.",
-      "లక్ష్మీ దేవి భక్తి సాధనలో ఉపయోగించే సంప్రదాయ మంత్రం."
+      "Traditional Lakshmi devotional mantra.",
+      "లక్ష్మీ దేవి సంప్రదాయ భక్తి మంత్రం."
+    ],
+    [
+      "Om Aim Saraswatyai Namah",
+      "ఓం ఐం సరస్వత్యై నమః",
+      "Traditional Saraswati mantra associated with learning.",
+      "విద్యతో అనుబంధమైన సంప్రదాయ సరస్వతీ మంత్రం."
+    ],
+    [
+      "Om Dum Durgayai Namah",
+      "ఓం దుం దుర్గాయై నమః",
+      "Traditional Durga mantra for devotional practice.",
+      "దుర్గా భక్తి సాధనలో ఉపయోగించే సంప్రదాయ మంత్రం."
+    ],
+    [
+      "Om Namo Narayanaya",
+      "ఓం నమో నారాయణాయ",
+      "Traditional Vishnu devotional mantra.",
+      "విష్ణు భక్తిలో ప్రసిద్ధి చెందిన సంప్రదాయ మంత్రం."
+    ],
+    [
+      "Om Namo Bhagavate Vasudevaya",
+      "ఓం నమో భగవతే వాసుదేవాయ",
+      "Traditional Krishna/Vishnu devotional mantra.",
+      "కృష్ణుడు/విష్ణువు భక్తిలో ప్రసిద్ధి చెందిన సంప్రదాయ మంత్రం."
+    ],
+    [
+      "Shri Ram Jai Ram Jai Jai Ram",
+      "శ్రీ రామ్ జై రామ్ జై జై రామ్",
+      "Traditional Rama devotional chant.",
+      "శ్రీరామ భక్తిలో ప్రసిద్ధి చెందిన సంప్రదాయ జపం."
+    ],
+    [
+      "Om Shri Ramaya Namah",
+      "ఓం శ్రీ రామాయ నమః",
+      "Traditional Rama mantra.",
+      "శ్రీరాముని సంప్రదాయ మంత్రం."
+    ],
+    [
+      "Om Shanaischaraya Namah",
+      "ఓం శనైశ్చరాయ నమః",
+      "Traditional Shani devotional mantra.",
+      "శని దేవుని సంప్రదాయ భక్తి మంత్రం."
+    ],
+    [
+      "Om Suryaya Namah",
+      "ఓం సూర్యాయ నమః",
+      "Traditional Surya mantra.",
+      "సూర్య దేవుని సంప్రదాయ మంత్రం."
+    ],
+    [
+      "Om Adityaya Namah",
+      "ఓం ఆదిత్యాయ నమః",
+      "Traditional Aditya devotional mantra.",
+      "ఆదిత్యుని సంప్రదాయ భక్తి మంత్రం."
+    ],
+    [
+      "Om Kartikeyaya Namah",
+      "ఓం కార్తికేయాయ నమః",
+      "Traditional Kartikeya mantra.",
+      "కార్తికేయుని సంప్రదాయ మంత్రం."
+    ],
+    [
+      "Om Skandaya Namah",
+      "ఓం స్కందాయ నమః",
+      "Traditional Skanda devotional mantra.",
+      "స్కందుని సంప్రదాయ భక్తి మంత్రం."
+    ],
+    [
+      "Om Parvatyai Namah",
+      "ఓం పార్వత్యై నమః",
+      "Traditional Parvati devotional mantra.",
+      "పార్వతీ దేవి భక్తి మంత్రం."
+    ],
+    [
+      "Om Nandikeshvaraya Namah",
+      "ఓం నందికేశ్వరాయ నమః",
+      "Traditional Nandi devotional invocation.",
+      "నందికేశ్వరుని సంప్రదాయ భక్తి ఆహ్వానం."
+    ],
+    [
+      "Om Dattatreyaya Namah",
+      "ఓం దత్తాత్రేయాయ నమః",
+      "Traditional Dattatreya mantra.",
+      "దత్తాత్రేయుని సంప్రదాయ మంత్రం."
+    ],
+    [
+      "Om Ayyappaya Namah",
+      "ఓం అయ్యప్పాయ నమః",
+      "Traditional Ayyappa devotional mantra.",
+      "అయ్యప్ప స్వామి సంప్రదాయ భక్తి మంత్రం."
+    ],
+    [
+      "Om Sitaramabhyaam Namah",
+      "ఓం సీతారామాభ్యాం నమః",
+      "Traditional Sita-Rama devotional mantra.",
+      "సీతారాముల సంప్రదాయ భక్తి మంత్రం."
+    ],
+    [
+      "Om Radha Krishnaya Namah",
+      "ఓం రాధా కృష్ణాయ నమః",
+      "Devotional invocation of Radha and Krishna.",
+      "రాధా కృష్ణుల భక్తి ఆహ్వానం."
+    ],
+    [
+      "Om Nrisimhaya Namah",
+      "ఓం నృసింహాయ నమః",
+      "Traditional Narasimha mantra.",
+      "నృసింహ స్వామి సంప్రదాయ మంత్రం."
+    ],
+    [
+      "Om Lakshmi Nrisimhaya Namah",
+      "ఓం లక్ష్మీ నృసింహాయ నమః",
+      "Traditional Lakshmi Narasimha devotional mantra.",
+      "లక్ష్మీ నృసింహ స్వామి సంప్రదాయ భక్తి మంత్రం."
+    ],
+    [
+      "Om Keshavaya Namah",
+      "ఓం కేశవాయ నమః",
+      "Traditional Vishnu name mantra.",
+      "విష్ణువు నామస్మరణలోని సంప్రదాయ మంత్రం."
+    ],
+    [
+      "Om Madhavaya Namah",
+      "ఓం మాధవాయ నమః",
+      "Traditional Vishnu name mantra.",
+      "విష్ణువు నామస్మరణలోని సంప్రదాయ మంత్రం."
+    ],
+    [
+      "Om Govindaya Namah",
+      "ఓం గోవిందాయ నమః",
+      "Traditional Govinda name mantra.",
+      "గోవింద నామస్మరణలోని సంప్రదాయ మంత్రం."
+    ],
+    [
+      "Om Achyutaya Namah",
+      "ఓం అచ్యుతాయ నమః",
+      "Traditional Vishnu name mantra.",
+      "విష్ణువు నామస్మరణలోని సంప్రదాయ మంత్రం."
+    ],
+    [
+      "Om Damodaraya Namah",
+      "ఓం దామోదరాయ నమః",
+      "Traditional Krishna name mantra.",
+      "కృష్ణుని నామస్మరణలోని సంప్రదాయ మంత్రం."
+    ],
+    [
+      "Om Janardanaya Namah",
+      "ఓం జనార్దనాయ నమః",
+      "Traditional Vishnu name mantra.",
+      "విష్ణువు నామస్మరణలోని సంప్రదాయ మంత్రం."
     ]
   ],
   "wisdom": [
     [
-      "Pause before reacting. Speak truthfully. Do one useful thing with full attention.",
-      "ప్రతిస్పందించే ముందు కాసేపు ఆగండి. నిజాయితీగా మాట్లాడండి. పూర్తి శ్రద్ధతో ఒక మంచి పని చేయండి."
+      "Begin where you are; sincerity matters more than a perfect beginning.",
+      "మీరు ఉన్న చోటే ప్రారంభించండి; పరిపూర్ణ ప్రారంభం కంటే నిజాయితీ ముఖ్యం."
     ],
     [
-      "A peaceful mind does not require a perfect day.",
-      "పరిపూర్ణమైన రోజు అవసరం లేదు; ప్రశాంతమైన మనస్సు ముఖ్యం."
+      "A quiet mind can hear lessons that a hurried mind misses.",
+      "తొందరపడే మనస్సు మిస్ చేసే పాఠాలను ప్రశాంతమైన మనస్సు వినగలదు."
     ],
     [
-      "Let your actions reflect the values you want to carry forward.",
-      "మీరు ముందుకు తీసుకెళ్లాలనుకునే విలువలు మీ చర్యల్లో కనిపించాలి."
+      "Choose one helpful action instead of carrying ten unfinished intentions.",
+      "పూర్తికాని పది సంకల్పాలను మోసే బదులు ఒక ఉపయోగకరమైన పనిని ఎంచుకోండి."
     ],
     [
-      "Consistency in small good actions becomes a strong habit.",
-      "చిన్న మంచి పనుల్లో స్థిరత్వం బలమైన అలవాటుగా మారుతుంది."
+      "Gratitude changes attention before it changes circumstances.",
+      "కృతజ్ఞత పరిస్థితులను మార్చే ముందు మన దృష్టిని మార్చుతుంది."
+    ],
+    [
+      "The quality of a day is often shaped by the attention you give to small moments.",
+      "చిన్న క్షణాలకు మీరు ఇచ్చే శ్రద్ధే తరచుగా రోజు నాణ్యతను నిర్ణయిస్తుంది."
+    ],
+    [
+      "Discipline becomes lighter when it is connected to a meaningful purpose.",
+      "అర్థవంతమైన లక్ష్యంతో అనుసంధానమైనప్పుడు క్రమశిక్షణ సులభంగా అనిపిస్తుంది."
+    ],
+    [
+      "Listening carefully is also a form of kindness.",
+      "శ్రద్ధగా వినడం కూడా ఒక రకమైన దయ."
+    ],
+    [
+      "A pause can be a choice, not a delay.",
+      "ఒక విరామం ఆలస్యం కాదు; అది ఒక ఎంపిక కావచ్చు."
+    ],
+    [
+      "Keep what teaches you; release what only weighs you down.",
+      "మీకు నేర్పేది ఉంచుకోండి; కేవలం భారంగా మారేదాన్ని వదిలేయండి."
+    ],
+    [
+      "Good habits grow through repetition, not intensity.",
+      "మంచి అలవాట్లు తీవ్రతతో కాకుండా పునరావృతంతో పెరుగుతాయి."
     ]
   ],
   "festivals": [
@@ -227,6 +501,128 @@
       "ఈ రోజంతా పాటించేందుకు ఒక మంచి సంకల్పాన్ని ఎంచుకోండి."
     ]
   ],
-  "version": 2,
-  "regionNote": "Festival dates are starter reference dates; verify local panchang for regional observance."
+  "version": 3,
+  "regionNote": "Festival dates are starter reference dates; verify local panchang for regional observance.",
+  "questions": [
+    [
+      "What is one good action you can complete today without waiting for perfect conditions?",
+      "పరిపూర్ణ పరిస్థితుల కోసం ఎదురుచూడకుండా ఈ రోజు మీరు పూర్తి చేయగల ఒక మంచి పని ఏమిటి?"
+    ],
+    [
+      "Where can you replace impatience with one calm breath?",
+      "ఎక్కడ మీరు అసహనానికి బదులుగా ఒక ప్రశాంతమైన శ్వాసను ఎంచుకోగలరు?"
+    ],
+    [
+      "What value do you want your actions to show today?",
+      "ఈ రోజు మీ చర్యలు ఏ విలువను చూపించాలని మీరు కోరుకుంటున్నారు?"
+    ],
+    [
+      "Who could benefit from a kind word from you today?",
+      "ఈ రోజు మీ నుంచి ఒక మంచి మాట ఎవరికి ఉపయోగపడవచ్చు?"
+    ],
+    [
+      "What can you learn from a difficulty you are facing?",
+      "మీరు ఎదుర్కొంటున్న ఒక కష్టంనుంచి ఏమి నేర్చుకోవచ్చు?"
+    ],
+    [
+      "Which task deserves your full attention instead of divided attention?",
+      "విభజిత దృష్టికి బదులుగా పూర్తి శ్రద్ధకు అర్హమైన పని ఏది?"
+    ],
+    [
+      "What worry can you postpone until there is something practical to do?",
+      "ఆచరణాత్మకంగా చేయాల్సిన పని వచ్చే వరకు ఏ ఆందోళనను పక్కన పెట్టవచ్చు?"
+    ],
+    [
+      "How can you turn gratitude into a useful action today?",
+      "ఈ రోజు కృతజ్ఞతను ఒక ఉపయోగకరమైన చర్యగా ఎలా మార్చగలరు?"
+    ],
+    [
+      "What habit would become easier if you practiced it for just five minutes?",
+      "కేవలం ఐదు నిమిషాలు సాధన చేస్తే ఏ అలవాటు సులభమవుతుంది?"
+    ],
+    [
+      "What does patience look like in one specific situation today?",
+      "ఈ రోజు ఒక నిర్దిష్ట పరిస్థితిలో ఓర్పు ఎలా కనిపిస్తుంది?"
+    ],
+    [
+      "What can you simplify before beginning your next task?",
+      "తదుపరి పనిని ప్రారంభించే ముందు మీరు ఏమి సులభతరం చేయగలరు?"
+    ],
+    [
+      "Which conversation deserves more listening and less reacting?",
+      "ఏ సంభాషణలో తక్కువ ప్రతిస్పందన, ఎక్కువ వినడం అవసరం?"
+    ],
+    [
+      "What is one thing you can finish instead of adding another task?",
+      "మరో పని జోడించకుండా మీరు పూర్తి చేయగల ఒక పని ఏమిటి?"
+    ],
+    [
+      "Where can you choose kindness without compromising honesty?",
+      "నిజాయితీని కోల్పోకుండా ఎక్కడ దయను ఎంచుకోగలరు?"
+    ],
+    [
+      "What would a peaceful version of your next decision look like?",
+      "మీ తదుపరి నిర్ణయం ప్రశాంతంగా తీసుకుంటే అది ఎలా ఉంటుంది?"
+    ],
+    [
+      "What lesson from yesterday can improve one choice today?",
+      "నిన్నటి ఏ పాఠం ఈ రోజు ఒక నిర్ణయాన్ని మెరుగుపరచగలదు?"
+    ],
+    [
+      "What deserves your energy, and what does not?",
+      "మీ శక్తికి ఏది అర్హమైనది, ఏది కాదు?"
+    ],
+    [
+      "How can you serve someone without needing recognition?",
+      "ప్రశంస అవసరం లేకుండా మీరు ఎవరికి ఎలా సేవ చేయగలరు?"
+    ],
+    [
+      "What would you like to remember about today's attitude?",
+      "ఈ రోజు మీ వైఖరి గురించి మీరు ఏమి గుర్తుంచుకోవాలనుకుంటున్నారు?"
+    ],
+    [
+      "What can you release so you can focus on what matters now?",
+      "ఇప్పుడు ముఖ్యమైన దానిపై దృష్టి పెట్టడానికి మీరు ఏదాన్ని వదిలేయగలరు?"
+    ],
+    [
+      "Where can you practice humility today?",
+      "ఈ రోజు మీరు ఎక్కడ వినయాన్ని ఆచరించగలరు?"
+    ],
+    [
+      "What is one small step toward a goal you care about?",
+      "మీకు ముఖ్యమైన లక్ష్యం వైపు ఒక చిన్న అడుగు ఏమిటి?"
+    ],
+    [
+      "How can you make someone's day slightly easier?",
+      "ఎవరైనా వారి రోజును కొంచెం సులభంగా గడపడానికి మీరు ఏమి చేయగలరు?"
+    ],
+    [
+      "What thought would you like to replace with a more constructive one?",
+      "ఏ ఆలోచనను మరింత నిర్మాణాత్మకమైన ఆలోచనతో మార్చాలనుకుంటున్నారు?"
+    ],
+    [
+      "What does devotion mean to you beyond ritual?",
+      "ఆచారానికి మించి భక్తి మీకు ఏమి అర్థం?"
+    ],
+    [
+      "What can you do today that your future self will appreciate?",
+      "మీ భవిష్యత్తు స్వరూపం ఈ రోజు చేసినందుకు కృతజ్ఞత చెప్పే పని ఏమిటి?"
+    ],
+    [
+      "When did patience help you recently?",
+      "ఇటీవల ఓర్పు మీకు ఎప్పుడు సహాయపడింది?"
+    ],
+    [
+      "What is one distraction you can consciously put away for an hour?",
+      "ఒక గంట పాటు మీరు చైతన్యంగా పక్కన పెట్టగల ఒక దృష్టి మళ్లింపు ఏమిటి?"
+    ],
+    [
+      "What kind of person do your repeated actions make you?",
+      "మీ పునరావృత చర్యలు మిమ్మల్ని ఎలాంటి వ్యక్తిగా రూపొందిస్తున్నాయి?"
+    ],
+    [
+      "What is worth doing well today even if nobody notices?",
+      "ఎవరూ గమనించకపోయినా ఈ రోజు శ్రద్ధగా చేయాల్సిన పని ఏమిటి?"
+    ]
+  ]
 }
