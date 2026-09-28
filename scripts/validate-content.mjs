@@ -1,7 +1,7 @@
 import fs from "node:fs";
 const c=JSON.parse(fs.readFileSync("public/content.json","utf8"));
 
-for (const k of ["deities","messages","mantras","wisdom","festivals","puja"]) {
+for (const k of ["deities","messages","mantras","wisdom","questions","festivals","puja"]) {
   if (!Array.isArray(c[k]) || !c[k].length) throw new Error(k + " is empty");
 }
 
@@ -20,3 +20,10 @@ for (const festival of c.festivals) {
 }
 
 console.log("Content validation passed.");
+
+for (const k of ["messages","mantras","questions"]) {
+  const values = c[k].map(item => item[1] || item[0]).filter(Boolean);
+  if (values.length < 30 || new Set(values).size !== values.length) {
+    throw new Error(k + " must contain at least 30 unique daily entries");
+  }
+}
