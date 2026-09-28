@@ -1,0 +1,16 @@
+import {cp,rm,mkdir,readFile} from "node:fs/promises";
+import {execFileSync} from "node:child_process";
+import {join} from "node:path";
+import {fileURLToPath} from "node:url";
+const root=join(fileURLToPath(new URL(".",import.meta.url)),"..");
+const src=join(root,"extension");
+const out=join(root,"dist","dharmapulse-chrome-extension");
+const version=JSON.parse(await readFile(join(src,"manifest.json"),"utf8")).version;
+const zip=join(root,"dist","dharmapulse-chrome-extension-v"+version+".zip");
+await rm(out,{recursive:true,force:true});
+await mkdir(join(root,"dist"),{recursive:true});
+await cp(src,out,{recursive:true});
+await cp(join(root,"public","content.json"),join(out,"content.json"));
+await cp(join(root,"public","icon.svg"),join(out,"icon.svg"));
+execFileSync("zip",["-qr",zip,"."],{cwd:out,stdio:"inherit"});
+console.log(zip);
