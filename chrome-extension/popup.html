@@ -1,1 +1,15 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DharmaPulse</title><link rel="stylesheet" href="popup.css"></head><body><main class="shell"><header class="brand"><div class="mark">ॐ</div><div><h1>DharmaPulse</h1><p>A moment of Dharma, every day.</p></div></header><section class="card hero"><span class="eyebrow">TODAY</span><h2 id="message">Loading your daily Dharma…</h2><p id="mantra" class="mantra"></p></section><div class="actions"><button id="open" class="primary">Open DharmaPulse</button><button id="refresh">Refresh</button></div><section class="card settings"><div class="row"><div><strong>Daily reminder</strong><small>Receive one devotional notification each day.</small></div><label class="switch"><input id="reminders" type="checkbox"><span></span></label></div><div class="row"><label for="hour"><strong>Reminder hour</strong></label><select id="hour"><option value="6">06:00</option><option value="7">07:00</option><option value="8">08:00</option><option value="9">09:00</option><option value="18">18:00</option><option value="20">20:00</option></select></div><div class="row"><label for="language"><strong>Language</strong></label><select id="language"><option value="en">English</option><option value="te">తెలుగు</option></select></div><button id="test" class="secondary">Test reminder</button></section><footer><span>Free • No account • No tracking</span><span id="status"></span></footer></main><script src="popup.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DharmaPulse</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+<header><div class="brand"><span class="om">ॐ</span><div><h1>DharmaPulse</h1><p id="date"></p></div></div><button id="refresh" class="icon-btn" aria-label="Show another blessing" title="New blessing">↻</button></header>
+<main>
+<section class="hero"><div class="deity-row"><img id="deityImage" class="deity-image" src="icons/icon-128.png" alt="Deity"><div><p class="eyebrow">TODAY'S DEITY</p><h2 id="deity"></h2><p id="deityTelugu" class="muted"></p></div></div>
+<blockquote id="message"></blockquote><div class="chips"><span id="mantra"></span><span id="category">Daily Dharma</span></div><p id="wisdom" class="wisdom"></p>
+<div class="actions"><button id="save" class="primary">♡ Save</button><button id="open" class="secondary">Open DharmaPulse</button></div></section>
+<section class="reminder"><div><strong>Daily reminder</strong><p id="reminderStatus">Checking…</p></div><button id="reminder" class="secondary">Enable 7:00 AM</button></section>
+<p id="status" class="status" role="status"></p>
+</main>
+<footer><a href="options.html">Settings</a><span>•</span><a href="https://narsing-s.github.io/DharmaPulse/" target="_blank">Web app</a></footer>
+<script src="popup.js"></script>
+</body></html>
