@@ -6,3 +6,5 @@
 
 .statusBar{display:flex;justify-content:flex-end;max-width:1180px;margin:8px auto;color:var(--muted,#6f6258);font-size:.8rem}.statusBar span{padding:5px 9px;border-radius:999px;background:var(--card,#fff);border:1px solid var(--border,#eadfd5)}
 @media(max-width:640px){.statusBar{padding:0 12px}nav{overflow-x:auto;justify-content:flex-start;flex-wrap:nowrap}nav button{white-space:nowrap}}
+
+.sectionHead{display:flex;align-items:center;justify-content:space-between;gap:16px}.sectionHead>div{min-width:0}details{margin-top:18px;border:1px solid var(--line);border-radius:16px;padding:12px 14px}details summary{cursor:pointer;font-weight:700}button:disabled{opacity:.55;cursor:not-allowed}
