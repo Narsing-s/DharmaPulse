@@ -1,0 +1,16 @@
+{
+  "name": "DharmaPulse",
+  "short_name": "DharmaPulse",
+  "description": "A moment of Dharma, every day.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbf7ef",
+  "theme_color": "#6f4322",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
