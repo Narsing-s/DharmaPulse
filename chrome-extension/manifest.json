@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "DharmaPulse — Daily Dharma",
+  "short_name": "DharmaPulse",
+  "version": "1.0.0",
+  "description": "A calm daily devotional companion with Dharma, mantra, wisdom, deity images, and reminders.",
+  "minimum_chrome_version": "110",
+  "action": {"default_title": "Open DharmaPulse", "default_popup": "popup.html"},
+  "background": {"service_worker": "background.js"},
+  "permissions": ["alarms", "notifications", "storage"],
+  "host_permissions": [
+    "https://raw.githubusercontent.com/Narsing-s/DharmaPulse/*",
+    "https://commons.wikimedia.org/*",
+    "https://upload.wikimedia.org/*"
+  ],
+  "icons": {
+    "16": "icons/icon16.svg",
+    "32": "icons/icon32.svg",
+    "48": "icons/icon48.svg",
+    "128": "icons/icon128.svg"
+  }
+}
