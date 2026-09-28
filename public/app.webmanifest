@@ -10,7 +10,22 @@
     {
       "src": "/icon.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Today's Dharma",
+      "url": "/?tab=Today"
+    },
+    {
+      "name": "Panchang",
+      "url": "/?tab=Panchang"
+    },
+    {
+      "name": "Japa",
+      "url": "/?tab=Japa"
     }
   ]
 }
