@@ -1,0 +1,3 @@
+import type { MetadataRoute } from "next";
+const slugs=["kanaka-durga","venkateswara","shiva","hanuman","ganesha","lakshmi"];
+export default function sitemap(): MetadataRoute.Sitemap { const base=process.env.NEXT_PUBLIC_SITE_URL||"https://dharmapulse.vercel.app"; return [{url:base,changeFrequency:"daily",priority:1},...slugs.map(slug=>({url:`${base}/learn/${slug}`,changeFrequency:"weekly" as const,priority:.8}))]; }
