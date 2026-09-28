@@ -11,3 +11,13 @@ self.addEventListener("fetch",event=>{
     }).catch(()=>caches.match(event.request).then(cached=>cached||caches.match("/offline.html")))
   );
 });
+self.addEventListener("notificationclick",event=>{
+  event.notification.close();
+  event.waitUntil(clients.matchAll({type:"window",includeUncontrolled:true}).then(list=>{
+    const target=new URL("/",self.location.origin).href;
+    const existing=list.find(client=>client.url.startsWith(self.location.origin));
+    if(existing&&"focus"in existing)return existing.focus();
+    if(clients.openWindow)return clients.openWindow(target);
+    return undefined;
+  }));
+});
