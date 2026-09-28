@@ -30,6 +30,6 @@ export default function Home(){
   {tab==="Japa"&&<section className="info center"><div className="eyebrow">JAPA PRACTICE</div><h2>{telugu?mantra[1]:mantra[0]}</h2><p>{telugu?mantra[3]:mantra[2]}</p><div className="targets">{[11,21,54,108].map(n=><button className={target===n?"active":""} onClick={()=>{setTarget(n);setCount(0)}} key={n}>{n}</button>)}</div><div className="counter">{count}<small>/ {target}</small></div><button className="japa" onClick={()=>setCount(n=>Math.min(target,n+1))}>{count>=target?"✓ Complete":"Tap after each repetition"}</button><button onClick={()=>setCount(0)}>Reset</button></section>}
   {tab==="Favorites"&&<section className="info"><h2>Your favorites</h2>{fav.length?<div className="chips">{fav.map(x=><button onClick={()=>save(x)} key={x}>♥ {x}</button>)}</div>:<p>Save messages or deities to keep them here on this device.</p>}</section>}
   {tab==="Settings"&&<section className="info"><h2>Settings</h2><label><input type="checkbox" checked={reminder} onChange={e=>setReminder(e.target.checked)}/> Daily reminder</label><p>Chrome extension reminders can be configured from the extension.</p>{install&&<button onClick={install}>📲 Install DharmaPulse</button>}<p>Data is stored locally on this device. No account is required.</p></section>}
-  <footer>Made for a calmer start • No account required • DharmaPulse</footer>
+  <footer>Made for a calmer start • No account required • <a href="/privacy.html">Privacy</a> • DharmaPulse</footer>
  </main>
 }
