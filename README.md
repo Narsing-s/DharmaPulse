@@ -55,3 +55,20 @@ The product intentionally uses static local content first so it remains cheap, p
 ## Important
 
 Festival dates can vary by region and panchang. DharmaPulse content is informational and should not replace your family's or tradition's specific calendar/practice.
+
+## v1.2 feature set
+
+- Offline Panchang calculation with configurable latitude/longitude
+- Deity detail view
+- Expanded mantra experience with TTS, favorites and sharing
+- Meditation timer: 5/10/15/20/30 minutes
+- Local devotional history, Japa totals and meditation totals
+- PNG devotional share-card generator
+- Local JSON backup/export and restore/import
+- Local reset controls
+- DST-safe Chrome daily reminders
+- Privacy page, security headers, robots and sitemap
+- GitHub Actions build/smoke quality gate
+
+### Panchang and festival accuracy
+Panchang calculations depend on coordinates and the calculation engine's calendar conventions. Festival dates can vary by region and tradition, so DharmaPulse presents reference content and encourages verification with the user's local panchang for observance decisions.
