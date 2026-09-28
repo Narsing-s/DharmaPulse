@@ -3,3 +3,6 @@
 .formGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0}.formGrid label{display:grid;gap:6px;font-weight:700}.formGrid input{width:100%}.hiddenCanvas{display:none}.modal{position:fixed;inset:0;background:#0008;display:grid;place-items:center;padding:20px;z-index:10}.modalCard{position:relative;max-width:520px;width:100%;padding:32px;border-radius:24px;background:var(--card,#fff)}.close{position:absolute;right:15px;top:12px;border:0;background:transparent;font-size:28px}.fileButton{display:inline-flex;align-items:center;gap:8px}.fileButton input{display:none}.note{font-size:.88rem;opacity:.72}.tile .buttons{margin-top:12px}@media(max-width:650px){.formGrid{grid-template-columns:1fr}}
 
 :focus-visible{outline:3px solid #b66a2c;outline-offset:2px}@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}button,input{font:inherit}button{cursor:pointer}
+
+.statusBar{display:flex;justify-content:flex-end;max-width:1180px;margin:8px auto;color:var(--muted,#6f6258);font-size:.8rem}.statusBar span{padding:5px 9px;border-radius:999px;background:var(--card,#fff);border:1px solid var(--border,#eadfd5)}
+@media(max-width:640px){.statusBar{padding:0 12px}nav{overflow-x:auto;justify-content:flex-start;flex-wrap:nowrap}nav button{white-space:nowrap}}
