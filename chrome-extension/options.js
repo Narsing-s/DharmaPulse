@@ -1,0 +1,3 @@
+const enabled=document.getElementById("enabled"),time=document.getElementById("time"),status=document.getElementById("status");
+chrome.storage.local.get({enabled:false,hour:7,minute:0},s=>{enabled.checked=s.enabled;time.value=String(s.hour).padStart(2,"0")+":"+String(s.minute).padStart(2,"0")});
+document.getElementById("save").onclick=async()=>{const [hour,minute]=time.value.split(":").map(Number);await chrome.storage.local.set({enabled:enabled.checked,hour,minute});chrome.runtime.sendMessage({type:"schedule"});status.textContent=enabled.checked?"Saved. Your daily reminder is enabled.":"Saved. Your daily reminder is disabled."};
