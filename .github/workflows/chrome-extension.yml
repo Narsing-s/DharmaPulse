@@ -1,0 +1,26 @@
+name: DharmaPulse Chrome Extension
+on:
+  push:
+    branches: [main]
+    paths: ["extension/**","public/content.json","public/icon.svg","scripts/build-extension.mjs",".github/workflows/chrome-extension.yml"]
+  pull_request:
+    branches: [main]
+    paths: ["extension/**","public/content.json","public/icon.svg","scripts/build-extension.mjs",".github/workflows/chrome-extension.yml"]
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate manifest
+        run: node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('extension/manifest.json','utf8'));if(m.manifest_version!==3)throw new Error('Manifest V3 required');if(!/^\\d+\\.\\d+\\.\\d+$/.test(m.version))throw new Error('Invalid extension version')"
+      - name: Validate JavaScript
+        run: node --check extension/background.js && node --check extension/popup.js && node --check extension/options.js
+      - name: Build ZIP
+        run: node scripts/build-extension.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dharmapulse-chrome-extension
+          path: dist/dharmapulse-chrome-extension-v*.zip
