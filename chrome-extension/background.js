@@ -1,14 +1,24 @@
-const CONTENT_URL="https://raw.githubusercontent.com/Narsing-s/DharmaPulse/main/public/content.json";
-const APP_URL="https://narsing-s.github.io/DharmaPulse/";
-const fallback={messages:[{en:"Begin today with gratitude, clarity, and one good action.",te:"కృతజ్ఞత, స్పష్టత, ఒక మంచి కార్యంతో ఈ రోజును ప్రారంభించండి."}],mantras:[{en:"Om Namah Shivaya",te:"ఓం నమః శివాయ"}]};
-
-function dayIndex(){const d=new Date(),s=new Date(d.getFullYear(),0,1);return Math.floor((d-s)/86400000)}
-async function getContent(){try{const r=await fetch(CONTENT_URL,{cache:"no-store"});if(!r.ok)throw 0;return await r.json()}catch{return fallback}}
-async function getDaily(){const c=await getContent(),i=dayIndex(),ms=Array.isArray(c.messages)?c.messages:fallback.messages,js=Array.isArray(c.mantras)?c.mantras:fallback.mantras;return{message:ms[i%ms.length],mantra:js[i%js.length]}}
-async function notify(){const s=await chrome.storage.local.get({remindersEnabled:true,language:"en"});if(!s.remindersEnabled)return;const d=await getDaily(),te=s.language==="te";const message=te?(d.message?.te||d.message?.en):(d.message?.en||d.message?.te);const mantra=te?(d.mantra?.te||d.mantra?.en):(d.mantra?.en||d.mantra?.te);await chrome.notifications.create("dharmapulse-daily",{type:"basic",iconUrl:chrome.runtime.getURL("icons/icon128.svg"),title:"DharmaPulse",message:message||"Begin your day with Dharma.",contextMessage:mantra||"A moment of Dharma, every day."})}
-function schedule(){chrome.alarms.create("dharmapulse-daily",{periodInMinutes:1440})}
-chrome.runtime.onInstalled.addListener(async()=>{await chrome.storage.local.set({remindersEnabled:true,reminderHour:7,language:"en"});schedule()});
+const ALARM="dharmapulse-daily";
+const DEFAULT={enabled:false,hour:7,minute:0};
+async function settings(){return {...DEFAULT,...await chrome.storage.local.get(DEFAULT)}}
+async function schedule(){
+  const s=await settings();
+  await chrome.alarms.clear(ALARM);
+  if(!s.enabled)return;
+  const now=new Date(), next=new Date(now);
+  next.setHours(Number(s.hour),Number(s.minute),0,0);
+  if(next<=now)next.setDate(next.getDate()+1);
+  await chrome.alarms.create(ALARM,{when:next.getTime()});
+}
+chrome.runtime.onInstalled.addListener(async()=>{await chrome.storage.local.set(DEFAULT);await schedule()});
 chrome.runtime.onStartup.addListener(schedule);
-chrome.alarms.onAlarm.addListener(a=>{if(a.name==="dharmapulse-daily")notify()});
-chrome.notifications.onClicked.addListener(async()=>{const tabs=await chrome.tabs.query({url:APP_URL+"*"});if(tabs[0]?.id)await chrome.tabs.update(tabs[0].id,{active:true});else await chrome.tabs.create({url:APP_URL})});
-chrome.runtime.onMessage.addListener((m,_s,send)=>{if(m?.type==="openApp"){chrome.tabs.create({url:APP_URL});send({ok:true});return}if(m?.type==="testNotification"){notify().then(()=>send({ok:true})).catch(()=>send({ok:false}));return true}if(m?.type==="setReminder"){chrome.storage.local.set({remindersEnabled:!!m.enabled,reminderHour:Number(m.hour)||7}).then(()=>send({ok:true}));return true}if(m?.type==="setLanguage"){chrome.storage.local.set({language:m.language==="te"?"te":"en"}).then(()=>send({ok:true}));return true}});
+chrome.alarms.onAlarm.addListener(async a=>{
+  if(a.name!==ALARM)return;
+  const s=await settings();
+  if(!s.enabled)return;
+  await chrome.notifications.create("dharmapulse-"+Date.now(),{type:"basic",iconUrl:"icons/icon-128.png",title:"DharmaPulse",message:"A moment of Dharma, every day. Open DharmaPulse for today's blessing."});
+  await schedule();
+});
+chrome.runtime.onMessage.addListener(msg=>{if(msg?.type==="schedule")schedule()});
+chrome.notifications.onClicked.addListener(()=>chrome.tabs.create({url:"https://narsing-s.github.io/DharmaPulse/"}));
+chrome.storage.onChanged.addListener((c,a)=>{if(a==="local"&&(c.enabled||c.hour||c.minute))schedule()});
