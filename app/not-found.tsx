@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound(){return <main className="errorPage"><section className="card"><h1>Page not found</h1><p>This DharmaPulse page does not exist.</p><Link href="/">Return to DharmaPulse</Link></section></main>}
