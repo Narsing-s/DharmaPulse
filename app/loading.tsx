@@ -1,0 +1,1 @@
+export default function Loading(){return <main><section className="info center"><div className="orb">ॐ</div><h2>Loading DharmaPulse…</h2><p>Preparing today's devotional experience.</p></section></main>}
