@@ -19,6 +19,7 @@ DharmaPulse is an original, account-free devotional companion for web, PWA and C
 - 📲 Installable PWA
 - 📴 Offline cache through a service worker
 - 🔔 Chrome daily reminder with configurable time
+- 📳 Browser/PWA notification permission test using the service worker
 - ⚙️ Chrome extension settings
 - 📦 Shared JSON content library for web/extension alignment
 - 🔐 No login and no paid API dependency
@@ -50,7 +51,7 @@ content.json
 Daily selection → Wisdom → Mantra → Blessing → Optional reminder
 ```
 
-The product intentionally uses static local content first so it remains cheap, privacy-friendly and reliable.
+The product intentionally uses static local content first so it remains cheap, privacy-friendly and reliable. Daily messages, mantras, wisdom and questions contain 366 unique entries so leap years can use a full day-by-day cycle.
 
 ## Important
 
@@ -77,7 +78,7 @@ Panchang calculations depend on coordinates and the calculation engine's calenda
 ## Release checklist
 
 Before publishing a release, verify: 
-- `npm ci` installs the committed dependency graph.
+- `npm install` installs the dependency graph used by the project (a lockfile is not currently committed).
 - `npm run test:smoke`, `npm run test:content`, and `npm run test:panchang` pass.
 - `npm run build` succeeds on the same Node/Next.js versions used by the deployment provider.
 - The deployed URL is tested on mobile and desktop, including offline mode, PWA install, Panchang, Japa, backup/restore, and Chrome extension options.
