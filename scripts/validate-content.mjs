@@ -24,6 +24,6 @@ console.log("Content validation passed.");
 for (const k of ["messages","mantras","questions"]) {
   const values = c[k].map(item => item[1] || item[0]).filter(Boolean);
   if (values.length < 366 || new Set(values).size !== values.length) {
-    throw new Error(k + " must contain at least 365 unique daily entries");
+    throw new Error(k + " must contain at least 366 unique daily entries");
   }
 }
