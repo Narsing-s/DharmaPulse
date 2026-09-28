@@ -72,3 +72,13 @@ Festival dates can vary by region and panchang. DharmaPulse content is informati
 
 ### Panchang and festival accuracy
 Panchang calculations depend on coordinates and the calculation engine's calendar conventions. Festival dates can vary by region and tradition, so DharmaPulse presents reference content and encourages verification with the user's local panchang for observance decisions.
+
+
+## Release checklist
+
+Before publishing a release, verify: 
+- `npm ci` installs the committed dependency graph.
+- `npm run test:smoke`, `npm run test:content`, and `npm run test:panchang` pass.
+- `npm run build` succeeds on the same Node/Next.js versions used by the deployment provider.
+- The deployed URL is tested on mobile and desktop, including offline mode, PWA install, Panchang, Japa, backup/restore, and Chrome extension options.
+- Festival observance dates are checked against a local/regional panchang before being used for religious scheduling.
