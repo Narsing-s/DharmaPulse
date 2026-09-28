@@ -2,20 +2,56 @@
 
 **A moment of Dharma, every day.**
 
-DharmaPulse is an original, account-free devotional companion for web and Chrome. It provides a daily devotional message, deity explorer, simple wisdom, puja guidance, Telugu/English support, browser speech, favorites, sharing and daily extension reminders.
+DharmaPulse is an original, account-free devotional companion for web, PWA and Chrome. It is designed to provide a calm daily devotional moment without requiring an account or paid API.
 
-## Run the web app
+## Included
+
+- 🏠 Daily devotion, blessing and wisdom
+- 🛕 Deity explorer with search
+- 📅 Festival calendar
+- 🪔 Step-by-step simple puja guide
+- 📿 Mantra and Japa counter: 11 / 21 / 54 / 108
+- 🔊 Browser text-to-speech in English/Telugu
+- 🌐 Telugu / English preference persistence
+- ❤️ Local favorites
+- 🖼️ Native share with clipboard fallback
+- 🌙 Dark mode
+- 📲 Installable PWA
+- 📴 Offline cache through a service worker
+- 🔔 Chrome daily reminder with configurable time
+- ⚙️ Chrome extension settings
+- 📦 Shared JSON content library for web/extension alignment
+- 🔐 No login and no paid API dependency
+
+## Web app
+
 ```bash
 npm install
 npm run dev
 ```
 
+Open the local app and use **Settings → Install DharmaPulse** when the browser offers PWA installation.
+
 ## Chrome extension
+
 1. Open Chrome → Extensions → Manage Extensions.
 2. Enable Developer mode.
-3. Choose **Load unpacked** and select the repository's `public` folder.
+3. Choose **Load unpacked**.
+4. Select this repository's `public` folder.
+5. Open the extension's **Details → Extension options** to choose the daily reminder time.
 
-The extension uses Manifest V3, Chrome alarms, notifications and local browser storage-ready architecture. No account or paid API is required.
+## Architecture
 
-## Stack
-Next.js + React + TypeScript + static devotional content. The app is intentionally API-free for the first release so it can run cheaply and reliably.
+```
+content.json
+   ├── Web app
+   └── Chrome extension content
+          ↓
+Daily selection → Wisdom → Mantra → Blessing → Optional reminder
+```
+
+The product intentionally uses static local content first so it remains cheap, privacy-friendly and reliable.
+
+## Important
+
+Festival dates can vary by region and panchang. DharmaPulse content is informational and should not replace your family's or tradition's specific calendar/practice.
