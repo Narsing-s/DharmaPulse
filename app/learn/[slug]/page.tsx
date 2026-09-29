@@ -8,7 +8,7 @@ const pages = {
   "hanuman": ["Hanuman","హనుమంతుడు","Hanuman — Daily Devotion, Mantra & Reflection","Explore Hanuman devotional reflections, mantra practice and simple daily devotion with DharmaPulse.","Om Hanumate Namah","strength, humility and devoted service"],
   "ganesha": ["Ganesha","గణేశుడు","Ganesha — Daily Devotion, Mantra & Reflection","Explore Ganesha devotional reflections, mantra practice and simple daily routines with DharmaPulse.","Om Gam Ganapataye Namaha","new beginnings and thoughtful action"],
   "lakshmi": ["Lakshmi","లక్ష్మీ దేవి","Lakshmi — Daily Devotion, Mantra & Reflection","Explore Lakshmi devotional reflections, mantra practice and gratitude-focused daily practice with DharmaPulse.","Om Shreem Mahalakshmyai Namah","gratitude, generosity and responsible abundance"]
-] as const;
+} as const;
 
 export function generateStaticParams(){ return Object.keys(pages).map(slug=>({slug})); }
 
