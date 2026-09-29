@@ -1,19 +1,48 @@
 name: DharmaPulse Quality
+
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dharmapulse-quality-${ github.ref }
+  cancel-in-progress: true
+
 jobs:
   quality:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npm install
-      - run: npm run test:smoke
-      - run: npm run test:content
-      - run: npm run test:panchang
-      - run: npm run build
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Type check
+        run: npm run lint
+
+      - name: Content smoke test
+        run: npm run test:smoke
+
+      - name: Content validation
+        run: npm run test:content
+
+      - name: Panchang smoke test
+        run: npm run test:panchang
+
+      - name: Production build
+        run: npm run build
+
+      - name: Chrome extension package
+        run: npm run build:extension
