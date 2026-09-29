@@ -1,1 +1,46 @@
-{"name":"DharmaPulse — Daily Dharma & Devotion","short_name":"DharmaPulse","description":"A private, account-free devotional companion for reflections, mantras, Panchang, festivals, Japa and meditation.","start_url":"/","display":"standalone","background_color":"#fbf7ef","theme_color":"#6f4322","icons":[{"src":"/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}],"shortcuts":[{"name":"Today's Dharma","url":"/?tab=Today"},{"name":"Panchang","url":"/?tab=Panchang"},{"name":"Festivals","url":"/?tab=Festivals"},{"name":"Japa","url":"/?tab=Japa"}]}
+{
+  "name": "DharmaPulse — Daily Dharma & Devotion",
+  "short_name": "DharmaPulse",
+  "description": "A private, account-free devotional companion for reflections, mantras, Panchang, festivals, Japa and meditation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbf7ef",
+  "theme_color": "#6f4322",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Today's Dharma",
+      "url": "/?tab=Today"
+    },
+    {
+      "name": "Panchang",
+      "url": "/?tab=Panchang"
+    },
+    {
+      "name": "Festivals",
+      "url": "/?tab=Festivals"
+    },
+    {
+      "name": "Japa",
+      "url": "/?tab=Japa"
+    }
+  ],
+  "id": "/",
+  "lang": "en",
+  "dir": "auto",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": [
+    "lifestyle",
+    "health",
+    "education"
+  ],
+  "prefer_related_applications": false
+}
