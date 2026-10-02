@@ -6,12 +6,12 @@ type HistoryItem = { date: string; japa?: number; meditation?: number };
 type Session = { date: string; minutes?: number; type?: string };
 
 const library = [
-  { title: "Deity Guides", te: "దేవతా మార్గదర్శకాలు", description: "Short devotional guides, mantras and reflections.", href: "/learn/kanaka-durga", icon: "🛕" },
-  { title: "Bhagavad Gita", te: "భగవద్గీత", description: "A future-ready space for chapter and verse-based study.", href: "#gita", icon: "📖" },
-  { title: "Mantra Practice", te: "మంత్ర సాధన", description: "Return to the mantras already available in DharmaPulse.", href: "#mantra", icon: "📿" },
-  { title: "Puja Guides", te: "పూజ మార్గదర్శకాలు", description: "Simple, respectful steps for a focused devotional moment.", href: "#puja", icon: "🪔" },
-  { title: "Dharma Reflections", te: "ధర్మ ఆలోచనలు", description: "Daily questions designed for quiet reflection and action.", href: "#wisdom", icon: "🌿" },
-  { title: "Meditation", te: "ధ్యానం", description: "Short sessions for stillness, attention and consistency.", href: "#meditate", icon: "🧘" }
+  { title: "Deity Guides", te: "దేవతా మార్గదర్శకాలు", description: "Short devotional guides, mantras and reflections.", tab: "Deities", icon: "🛕" },
+  { title: "Bhagavad Gita", te: "భగవద్గీత", description: "A future-ready space for chapter and verse-based study.", tab: "Wisdom", icon: "📖" },
+  { title: "Mantra Practice", te: "మంత్ర సాధన", description: "Return to the mantras already available in DharmaPulse.", tab: "Mantras", icon: "📿" },
+  { title: "Puja Guides", te: "పూజ మార్గదర్శకాలు", description: "Simple, respectful steps for a focused devotional moment.", tab: "Puja", icon: "🪔" },
+  { title: "Dharma Reflections", te: "ధర్మ ఆలోచనలు", description: "Daily questions designed for quiet reflection and action.", tab: "Wisdom", icon: "🌿" },
+  { title: "Meditation", te: "ధ్యానం", description: "Short sessions for stillness, attention and consistency.", tab: "Meditate", icon: "🧘" }
 ];
 
 export default function DharmaHub({
@@ -64,7 +64,7 @@ export default function DharmaHub({
               <div style={{ fontSize: 28 }}>{item.icon}</div>
               <b>{telugu ? item.te : item.title}</b>
               <small>{item.description}</small>
-              <a href={item.href} style={{ marginTop: "auto", fontWeight: 700 }}>Explore →</a>
+              <button type="button" onClick={() => window.dispatchEvent(new CustomEvent("dharmapulse:open-tab", { detail: item.tab }))} style={{ marginTop: "auto", fontWeight: 700 }}>Explore →</button>
             </article>
           ))}
         </div>
