@@ -7,7 +7,8 @@ type Session = { date: string; minutes?: number; type?: string };
 
 const library = [
   { title: "Deity Guides", te: "దేవతా మార్గదర్శకాలు", description: "Short devotional guides, mantras and reflections.", tab: "Deities", icon: "🛕" },
-  { title: "Bhagavad Gita", te: "భగవద్గీత", description: "A future-ready space for chapter and verse-based study.", tab: "Wisdom", icon: "📖" },
+  { title: "Bhagavad Gita", te: "భగవద్గీత", description: "18 chapters with chapter-by-chapter scripture reading and bookmarks.", tab: "Scriptures", icon: "📖" },
+  { title: "Ramayanam", te: "రామాయణం", description: "Seven Kandas organized for scripture study in English and Telugu.", tab: "Scriptures", icon: "🏹" },
   { title: "Mantra Practice", te: "మంత్ర సాధన", description: "Return to the mantras already available in DharmaPulse.", tab: "Mantras", icon: "📿" },
   { title: "Puja Guides", te: "పూజ మార్గదర్శకాలు", description: "Simple, respectful steps for a focused devotional moment.", tab: "Puja", icon: "🪔" },
   { title: "Dharma Reflections", te: "ధర్మ ఆలోచనలు", description: "Daily questions designed for quiet reflection and action.", tab: "Wisdom", icon: "🌿" },
