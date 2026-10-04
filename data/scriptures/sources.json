@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "note": "Scripture source registry. Full external texts are linked from the UI until they can be bundled with verified redistribution terms.",
+  "bhagavadGita": {
+    "english": {
+      "title": "Bhagavad Gita — public-domain English edition",
+      "url": "https://en.wikisource.org/wiki/Bhagavad-Gita_(Besant_4th)",
+      "license": "Public domain source edition"
+    },
+    "telugu": {
+      "title": "ఆంధ్ర భగవద్గీత — Telugu Wikisource",
+      "url": "https://te.wikisource.org/wiki/ఆంధ్ర_భగవద్గీత",
+      "license": "Wikisource text; verify page-level license before redistribution"
+    },
+    "publicDomainTeluguScan": {
+      "title": "శ్రీమద్భగవద్గీత — 1934 Telugu commentary scan",
+      "url": "https://commons.wikimedia.org/wiki/File:%E0%B0%B6%E0%B1%8D%E0%B0%B0%E0%B1%80%E0%B0%AE%E0%B0%A6%E0%B1%8D%E0%B0%AD%E0%B0%97%E0%B0%B5%E0%B0%A6%E0%B1%8D%E0%B0%97%E0%B1%80%E0%B0%A4_-_%E0%B0%9C%E0%B0%97%E0%B0%A6%E0%B1%8D%E0%B0%97%E0%B1%81%E0%B0%B0%E0%B1%81_%E0%B0%95%E0%B0%B3%E0%B1%8D%E0%B0%AF%E0%B0%BE%E0%B0%A3%E0%B0%BE%E0%B0%A8%E0%B0%82%E0%B0%A6_%E0%B0%AD%E0%B0%BE%E0%B0%B0%E0%B0%A4%E0%B1%80_%E0%B0%B8%E0%B1%8D%E0%B0%B5%E0%B0%BE%E0%B0%AE%E0%B0%BF_%E0%B0%B5%E0%B1%8D%E0%B0%AF%E0%B0%akh%E0%B0%BE%E0%B0%A8%E0%B0%AE%E0%B1%81.pdf",
+      "license": "Public domain in the cited Wikimedia record"
+    }
+  },
+  "ramayana": {
+    "telugu": {
+      "title": "వాల్మీకి రామాయణము — Telugu Wikisource",
+      "url": "https://te.wikisource.org/wiki/వాల్మీకి_రామాయణము",
+      "license": "CC BY-SA text as displayed by Wikisource"
+    },
+    "english": {
+      "title": "The Ramayana — Ralph T. H. Griffith",
+      "url": "https://en.wikisource.org/wiki/The_Ramayana",
+      "license": "Public-domain translation"
+    }
+  }
+}

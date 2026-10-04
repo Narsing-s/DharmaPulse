@@ -11,10 +11,13 @@ self.addEventListener("fetch",event=>{
     }).catch(()=>caches.match(event.request).then(cached=>cached||caches.match("/offline.html")))
   );
 });
+
+self.addEventListener("push",event=>{event.waitUntil((async()=>{let data={title:"DharmaPulse",body:"A new devotional reminder is waiting for you.",url:"/"};try{if(event.data)data={...data,...event.data.json()}}catch{try{if(event.data)data.body=event.data.text()}catch{}}await self.registration.showNotification(data.title,{body:data.body,icon:"/icon.svg",badge:"/icon.svg",tag:data.tag||"dharmapulse",data:{url:data.url||"/"}})})()});
+
 self.addEventListener("notificationclick",event=>{
   event.notification.close();
   event.waitUntil(clients.matchAll({type:"window",includeUncontrolled:true}).then(list=>{
-    const target=new URL("/",self.location.origin).href;
+    const target=new URL(event.notification.data?.url||"/",self.location.origin).href;
     const existing=list.find(client=>client.url.startsWith(self.location.origin));
     if(existing&&"focus"in existing)return existing.focus();
     if(clients.openWindow)return clients.openWindow(target);
