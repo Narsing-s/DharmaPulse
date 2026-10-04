@@ -260,6 +260,14 @@ Future improvements should strengthen the existing experience rather than duplic
 
 Contributions, bug reports and thoughtful improvements are welcome.
 
+### 🌱 Contribution flow
+
+1. Fork the repository.
+2. Create a focused feature or fix branch.
+3. Make the smallest change that solves the problem.
+4. Run the complete local quality checks.
+5. Open a pull request with a clear description of the change.
+
 Before opening a pull request:
 
 ```bash
@@ -271,13 +279,40 @@ npm run test:smoke
 npm run build
 ```
 
-Please keep changes focused, accessible, privacy-friendly and consistent with the existing DharmaPulse experience.
+Please keep contributions focused, accessible, privacy-friendly and consistent with the existing DharmaPulse experience. Avoid duplicate functionality and do not commit secrets, API keys, credentials or personal data.
+
+For detailed contribution guidance, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+---
+
+## 🔐 Security
+
+DharmaPulse follows a local-first approach and does not require accounts or paid APIs for its core experience.
+
+### 🛡️ Security principles
+
+- 🔒 Keep user data local wherever practical
+- 🚫 Never commit secrets, tokens, credentials or private keys
+- 🧹 Avoid collecting unnecessary personal data
+- 📦 Keep dependencies and build tooling maintained
+- 🧪 Run automated quality checks before changes are merged
+- 🌐 Review external links, permissions and browser capabilities carefully
+
+### 🚨 Reporting a vulnerability
+
+Please **do not disclose security vulnerabilities in public GitHub issues**.
+
+Use the repository's GitHub **Security / Private vulnerability reporting** channel when available. If private reporting is unavailable, contact the repository maintainer privately through GitHub before publicly disclosing sensitive details.
+
+See [SECURITY.md](SECURITY.md) for the reporting policy.
 
 ---
 
 ## 📄 License
 
-See the repository for the current project license and usage terms.
+DharmaPulse is distributed under the **MIT License**.
+
+See [LICENSE](LICENSE) for the complete license text.
 
 ---
 
