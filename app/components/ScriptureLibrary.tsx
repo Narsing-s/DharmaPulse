@@ -18,14 +18,14 @@ export default function ScriptureLibrary({telugu,favorites,onFavorite}:{telugu:b
  const [book,setBook]=useState<"gita"|"ramayana">("gita"),[chapter,setChapter]=useState(1),[data,setData]=useState<Chapter|null>(null),[verse,setVerse]=useState(0),[q,setQ]=useState(""),[loading,setLoading]=useState(true);
  useEffect(()=>{if(book!=="gita")return;let live=true;setLoading(true);fetch("/api/scriptures/gita/"+chapter).then(r=>r.json()).then(x=>{if(live){setData(x);setVerse(0)}}).catch(()=>{if(live)setData(null)}).finally(()=>live&&setLoading(false));return()=>{live=false}},[book,chapter]);
  const verses=data?.verses??[];
- const current=verses[verse]??null;
+ const current=verses[verse];
  const currentVerseNumber=current?.verseNumber??(verse+1);
  const currentText=current?.text??"";
  const currentTransliteration=current?.transliteration??"";
  const currentMeaning=current?.meaning??"";
  const currentTeluguMeaning=current?.teluguMeaning??"";
  const currentFavoriteKey="gita:"+chapter+":"+currentVerseNumber;
- const filtered=useMemo(()=>verses.map((v,i)=>({v,i})).filter(({v})=>(String(v.verseNumber)+" "+v.text+" "+v.teluguText+" "+v.meaning+" "+v.teluguMeaning).toLowerCase().includes(q.toLowerCase())),[verses,q]);
+ const filtered=useMemo(()=>verses.map((v,i)=>({v,i})).filter(({v})=>(String(v.verseNumber??"")+" "+(v.text??"")+" "+(v.teluguText??"")+" "+(v.meaning??"")+" "+(v.teluguMeaning??"")).toLowerCase().includes(q.toLowerCase())),[verses,q]);
  return <section className="info" aria-labelledby="scriptures-title">
   <div className="sectionHead"><div><h2 id="scriptures-title">{telugu?"ధర్మ గ్రంథాలయం":"Scripture Library"}</h2><p className="note">{telugu?"భగవద్గీత మరియు వాల్మీకి రామాయణం కోసం అధ్యయన స్థలం.":"Read, search, bookmark and continue your scripture study."}</p></div></div>
   <div className="buttons"><button className={book==="gita"?"active":""} onClick={()=>setBook("gita")}>📖 {telugu?"భగవద్గీత":"Bhagavad Gita"}</button><button className={book==="ramayana"?"active":""} onClick={()=>setBook("ramayana")}>🏹 {telugu?"రామాయణం":"Ramayanam"}</button></div>
