@@ -31,20 +31,50 @@ export default function DharmaHub({
   const [libraryQuery, setLibraryQuery] = useState("");
 
   const stats = useMemo(() => {
+    // Use local calendar dates: UTC conversion can shift a practice into the
+    // previous/next day for users outside UTC.
+    const toLocalDateKey = (date: Date) => {
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, "0");
+      const day = String(date.getDate()).padStart(2, "0");
+      return `${year}-${month}-${day}`;
+    };
+    const active = new Set(
+      history
+        .filter(x => Number(x.japa || 0) > 0 || Number(x.meditation || 0) > 0)
+        .map(x => x.date)
+    );
     const japa = history.reduce((sum, x) => sum + Number(x.japa || 0), 0);
     const meditation = history.reduce((sum, x) => sum + Number(x.meditation || 0), 0);
-    const activeDays = history.filter(x => Number(x.japa || 0) > 0 || Number(x.meditation || 0) > 0).length;
-    const active = new Set(history.filter(x => Number(x.japa || 0) > 0 || Number(x.meditation || 0) > 0).map(x => x.date));
+    const activeDays = active.size;
+    const today = new Date();
+    const todayKey = toLocalDateKey(today);
+    const yesterday = new Date(today);
+    yesterday.setDate(yesterday.getDate() - 1);
+    // A practice completed yesterday remains an active streak until today ends.
+    const anchor = active.has(todayKey) ? today : yesterday;
     let streak = 0;
     for (let i = 0; i < 366; i++) {
-      const d = new Date();
-      d.setDate(d.getDate() - i);
-      const key = d.toISOString().slice(0, 10);
-      if (!active.has(key)) break;
+      const day = new Date(anchor);
+      day.setDate(day.getDate() - i);
+      if (!active.has(toLocalDateKey(day))) break;
       streak++;
     }
-    return { japa, meditation, activeDays, streak };
-  }, [history]);
+    const week = Array.from({ length: 7 }, (_, index) => {
+      const day = new Date(today);
+      day.setDate(today.getDate() - (6 - index));
+      const key = toLocalDateKey(day);
+      const entries = history.filter(item => item.date === key);
+      return {
+        key,
+        label: day.toLocaleDateString(telugu ? "te-IN" : "en-IN", { weekday: "short" }),
+        active: active.has(key),
+        japa: entries.reduce((sum, item) => sum + Number(item.japa || 0), 0),
+        meditation: entries.reduce((sum, item) => sum + Number(item.meditation || 0), 0)
+      };
+    });
+    return { japa, meditation, activeDays, streak, week, weekActiveDays: week.filter(day => day.active).length };
+  }, [history, telugu]);
 
   if (mode === "library") {
     const filtered = library.filter(x =>
@@ -100,6 +130,31 @@ export default function DharmaHub({
             <small style={{ fontSize: 20, fontWeight: 800 }}>{value}</small>
           </article>
         ))}
+      </div>
+      <div style={{ marginTop: 18, padding: 18, borderRadius: 18, border: "1px solid var(--line, #ddd)" }}>
+        <div className="sectionHead">
+          <div>
+            <h3 style={{ margin: 0 }}>{telugu ? "గత 7 రోజుల సాధన" : "Last 7 days"}</h3>
+            <p className="note" style={{ margin: "5px 0 0" }}>
+              {telugu ? `7 రోజుల్లో ${stats.weekActiveDays} సాధన రోజులు` : `${stats.weekActiveDays} of 7 practice days`}
+            </p>
+          </div>
+          <b aria-label={telugu ? "ఈ వారం సాధన రోజులు" : "Practice days this week"}>{stats.weekActiveDays}/7</b>
+        </div>
+        <div role="list" aria-label={telugu ? "వారపు సాధన వివరాలు" : "Weekly practice activity"} style={{ display: "grid", gridTemplateColumns: "repeat(7, minmax(0, 1fr))", gap: 8, marginTop: 16 }}>
+          {stats.week.map(day => (
+            <div role="listitem" key={day.key} title={`${day.key}: ${day.japa} Japa, ${day.meditation} min meditation`} style={{ minWidth: 0, textAlign: "center" }}>
+              <div style={{ height: 76, display: "flex", alignItems: "end", justifyContent: "center", padding: 5, borderRadius: 12, background: "var(--bg, #faf7f1)", border: "1px solid var(--line, #ddd)" }}>
+                <div style={{ width: "100%", height: day.active ? "100%" : "12%", minHeight: 7, borderRadius: 8, background: day.active ? "var(--accent, #a85e2b)" : "var(--line, #ddd)" }} />
+              </div>
+              <b style={{ display: "block", marginTop: 7, fontSize: 12 }}>{day.label}</b>
+              <small className="note" style={{ display: "block", fontSize: 10 }}>{day.active ? (telugu ? "సాధన" : "Done") : "—"}</small>
+            </div>
+          ))}
+        </div>
+        <p className="note" style={{ marginBottom: 0 }}>
+          {telugu ? "మీ జపం మరియు ధ్యాన వివరాలు ఈ పరికరంలోని స్థానిక చరిత్ర నుంచే లెక్కించబడతాయి." : "Calculated from your on-device practice history; no account or cloud sync is used."}
+        </p>
       </div>
       <div style={{ marginTop: 18, padding: 18, borderRadius: 18, border: "1px solid var(--line, #ddd)" }}>
         <h3 style={{ marginTop: 0 }}>{telugu ? "ఈ రోజు కొనసాగించండి" : "Continue today's practice"}</h3>
