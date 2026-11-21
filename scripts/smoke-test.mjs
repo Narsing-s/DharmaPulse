@@ -8,4 +8,4 @@ for(const f of content.festivals){assert.match(f[0],/^\d{4}-\d{2}-\d{2}$/,"festi
 assert.ok(fs.existsSync("public/sw.js"),"PWA service worker missing");
 assert.ok(fs.existsSync("public/app.webmanifest"),"PWA manifest missing");
 assert.ok(fs.existsSync("public/options.html"),"extension options missing");
-console.log("DharmaPulse content/PWA/extension smoke tests passed.");
+console.log("DharmaPulse content/PWA/extension smoke tests passed.");\nassert.ok(fs.existsSync("app/components/DharmaCompanion.tsx"),"Dharma Companion component missing");\nconst appSource=fs.readFileSync("app/page.tsx","utf8");\nassert.ok(appSource.includes("DharmaCompanion"),"Dharma Companion is not wired into the app");\nconsole.log("Dharma Companion integration checks passed.");\n
