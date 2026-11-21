@@ -6,7 +6,7 @@
 
 <p>
   <strong>A calm, privacy-first devotional companion for Web, PWA & Chrome.</strong><br/>
-  Daily wisdom • Mantras • Japa • Panchang • Festivals • Meditation
+  Daily wisdom • Mantras • Japa • Panchang • Festivals • Meditation • Gita Study • Dharma Companion
 </p>
 
 <p>
@@ -76,7 +76,7 @@ It brings spiritual content and practical devotional tools together in one focus
 - Local Japa and meditation totals
 - Devotional history
 
-### 📱 Modern app experience
+### 🪷 Dharma Companion (2.0)\n- Bhagavad Gita study cards with chapter/verse references and practical reflections\n- General puja checklist with local progress and a flame-safety reminder\n- Personal Sankalpa goals with completion tracking\n- Offline Dharma reflection guide with transparent source references (not a live AI service)\n- Andhra Pradesh temple directory with map directions\n- Telugu / English interface and local-only persistence for companion data\n\n### 📱 Modern app experience
 - Installable PWA
 - Offline cache through service worker
 - Dark mode
